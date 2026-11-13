@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Made a Roman City Big?</title>
+  <meta name="description" content="Geography, roads and mines, or the hand of Rome? A data look at 1,362 cities of the Roman Empire around AD 200.">
+  <meta property="og:title" content="What Made a Roman City Big? I Asked 1,362 Cities">
+  <meta property="og:description" content="Geography, roads and mines, or the hand of Rome? A data look at the empire at its peak, around AD 200.">
+  <meta property="og:image" content="images/cover_roman_cities.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #222;
+      --muted: #666;
+      --accent: #C0392B;
+      --line: #e5e5e5;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 20px;
+      line-height: 1.65;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+    .kicker, .byline, figcaption, table, footer, .links {
+      font-family: "Inter", system-ui, sans-serif;
+    }
+    .kicker { color: var(--accent); font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 12px; }
+    h1 { font-size: 42px; line-height: 1.15; margin: 0 0 14px; }
+    .subtitle { font-size: 22px; color: var(--muted); margin: 0 0 20px; }
+    .byline { font-size: 15px; color: var(--muted); margin: 0 0 28px; }
+    .byline a, .links a, footer a { color: var(--accent); }
+    h2 { font-size: 27px; line-height: 1.25; margin: 48px 0 8px; }
+    p { margin: 0 0 18px; }
+    figure { margin: 26px 0 32px; }
+    figure.wide { margin-left: -60px; margin-right: -60px; }
+    img { width: 100%; height: auto; display: block; }
+    figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+    .stat { font-family: "Inter", system-ui, sans-serif; font-size: 34px; font-weight: 600; color: var(--accent); line-height: 1.1; margin: 8px 0 4px; }
+    .stat-label { font-family: "Inter", system-ui, sans-serif; font-size: 15px; color: var(--muted); margin: 0 0 24px; }
+    table { width: 100%; border-collapse: collapse; font-size: 16px; margin: 8px 0 28px; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    th { font-weight: 600; }
+    td.num, th.num { text-align: right; }
+    .links { font-size: 16px; border-top: 1px solid var(--line); padding-top: 22px; margin-top: 40px; }
+    footer { font-size: 13px; color: var(--muted); margin-top: 28px; line-height: 1.55; }
+    @media (max-width: 860px) { figure.wide { margin-left: 0; margin-right: 0; } }
+    @media (max-width: 600px) {
+      body { font-size: 18px; }
+      h1 { font-size: 32px; }
+      .subtitle { font-size: 19px; }
+      h2 { font-size: 23px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="kicker">Data story · Roman Empire</p>
+  <h1>What Made a Roman City Big? I Asked 1,362 Cities</h1>
+  <p class="subtitle">Geography, roads and mines, or the hand of Rome? A data look at the empire at its peak, around AD 200.</p>
+  <p class="byline">Lucas Vieira · <a href="https://github.com/lucasnvieira">github.com/lucasnvieira</a> · November 2026</p>
+
+  <figure class="wide">
+    <img src="images/cover_roman_cities.png" alt="Map of the Roman Empire with 1,362 cities; measured cities drawn as circles sized by area, with Rome (1,783 ha), Alexandria (972 ha) and Antioch (399 ha) labelled.">
+    <figcaption>Every city of the Roman Empire around AD 200. Red circles are drawn in proportion to the city's measured area; grey dots are cities nobody has measured.</figcaption>
+  </figure>
+
+  <p>In AD 200, the Roman Empire was at its peak. Thirty-five years later, the Crisis of the Third Century began: more than twenty emperors, invasions, plague and a collapsing silver coin. So I took a picture of the empire just before the storm and asked a simple question: what made a Roman city big?</p>
+  <p>I combined five open datasets: a catalogue of 1,362 cities, Stanford's ORBIS model of Roman travel, and maps of roads, coastlines, rivers and mines.</p>
+
+  <h2>1. Where and when did the Roman world become urban?</h2>
+  <p>Rome inherited most of its cities. Only 13% of them were founded under the emperors. The Greek East was urban centuries earlier (its typical city dates from 323 BC), while Rome built the West mostly in the 1st century BC. The newest cities went to North Africa, Britain and the Danube.</p>
+  <figure class="wide">
+    <img src="images/q1_urbanization_map.png" alt="Map and bar chart of city foundations by century: most cities were founded BC; the 180 cities founded AD are concentrated in North Africa, Britain and the Danube.">
+    <figcaption>Grey: cities founded BC. Red: cities founded under the emperors.</figcaption>
+  </figure>
+
+  <h2>2. Was it geography or Rome?</h2>
+  <p>Rome. The best signs of a big city were the variety of its public buildings and its rank: regional and provincial capitals had a median of 63 hectares, against 25.5 for other towns. Being on the coast, on a river, on a road or near a mine told almost nothing.</p>
+  <p>The surprise: cities far from Rome tended to be bigger (41 ha against 26 ha for the closest ones). Italy was full of small towns close to each other, while the provinces had fewer, larger centres.</p>
+  <figure>
+    <img src="images/q2_feature_importance.png" alt="Bar chart of feature importance: number of monument types and capital status lead, followed by distance to Rome.">
+    <figcaption>The longer the bar, the more the feature helps the model guess a city's size.</figcaption>
+  </figure>
+
+  <h2>3. How accurate is the model?</h2>
+  <p>Good for orders of magnitude. It can tell a town from a city, but not the exact area.</p>
+  <p class="stat">6 in 10</p>
+  <p class="stat-label">cities predicted within a factor of two of their real size. The typical miss is about 16 hectares.</p>
+
+  <h2>4. How big were the cities nobody measured?</h2>
+  <p>497 cities have never been measured. The model sees them mostly as small towns (about 19 ha, against 30 ha for the measured ones), which makes sense: archaeologists measure the famous sites first. The exceptions are in Egypt, where district capitals such as Ptolemais and Panopolis may have covered around 160 hectares.</p>
+  <figure>
+    <img src="images/q4_unmeasured_cities.png" alt="Histogram comparing model estimates: never-measured cities cluster around 15 to 25 hectares, measured cities around 20 to 60.">
+    <figcaption>The model's estimates for the measured cities (grey) and for the never-measured ones (red).</figcaption>
+  </figure>
+
+  <h2>5. Theatres in the East, arenas in the West?</h2>
+  <p>Yes. Two thirds of the Greek-speaking cities had a theatre, against one third in the West. Amphitheatres, the arenas for gladiators, show the opposite. One empire, two ideas of a good show.</p>
+  <table>
+    <thead>
+      <tr><th>Share of cities with a recorded…</th><th class="num">Greek East</th><th class="num">Latin West</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Theatre (drama)</td><td class="num">65.9%</td><td class="num">36.1%</td></tr>
+      <tr><td>Amphitheatre (gladiators)</td><td class="num">6.9%</td><td class="num">33.1%</td></tr>
+      <tr><td>Stadium (athletics)</td><td class="num">15.7%</td><td class="num">0.6%</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What I take from this</h2>
+  <p>A Roman city's size was less about its landscape and more about what Rome made of it: its title and its buildings. Two warnings: buildings are signs of a big city, not causes, and well-excavated regions have more records.</p>
+  <p>I also left one dataset out on purpose: coin hoards. People buried their savings when danger came, so hoards record fear more than wealth, and they would bring the crisis into a picture taken before it.</p>
+
+  <p class="links">The code, data and full analysis are on GitHub: <a href="https://github.com/lucasnvieira/roman-cities">github.com/lucasnvieira/roman-cities</a></p>
+
+  <footer>
+    <p>Data: J. W. Hanson (2016), cities database of the Oxford Roman Economy Project; ORBIS, the Stanford Geospatial Network Model of the Roman World; Ancient World Mapping Center (roads, coastline, rivers); OXREP Mines Database.</p>
+    <p>I used Claude Code (Anthropic) to help with the code and the text. Since English is not my native language, the AI also helped me review the grammar and keep the text clear and consistent.</p>
+  </footer>
+</main>
+</body>
+</html>
